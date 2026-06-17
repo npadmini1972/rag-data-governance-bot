@@ -15,10 +15,9 @@ st.set_page_config(
 # ─── Initialize API Clients ─────────────────────────────────────
 try:
     anthropic_key = st.secrets["ANTHROPIC_API_KEY"]
-    openai_key = st.secrets["OPENAI_API_KEY"]
     client = Anthropic(api_key=anthropic_key)
 except Exception:
-    st.error("API keys not found. Check .streamlit/secrets.toml")
+    st.error("API key not found. Check .streamlit/secrets.toml")
     st.stop()
 
 # ─── Load or Build Vector Store ─────────────────────────────────
