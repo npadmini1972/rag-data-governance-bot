@@ -1,7 +1,7 @@
 # FDA Part 11 RAG Governance Q&A Bot
 **A Data Governance tool powered by Claude AI + RAG**
 
-> Live demo: [https://rag-data-governance-bot-ed3fhggafltbwrepjzjtuj.streamlit.app](https://rag-data-governance-bot-ed3fhggafltbwrepjzjtuj.streamlit.app)
+> Live demo: [(https://pnagarajan-rag-data-governance-bot.streamlit.app/)]((https://pnagarajan-rag-data-governance-bot.streamlit.app/))
 
 ## Problem Statement
 Data governance and compliance teams at pharma and healthcare companies 
