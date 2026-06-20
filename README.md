@@ -37,6 +37,17 @@ back to the source document — in under 10 seconds.
 
 ## RAG Architecture
 
+```mermaid
+flowchart TD
+    A["FDA 21 CFR Part 11<br/>guidance document"] --> B["Chunk (600 tokens,<br/>100 overlap)"]
+    B --> C["Embed (MiniLM)<br/>build FAISS index, cached"]
+    D["Ask a governance question"] --> E["Retrieve top k=5<br/>relevant chunks"]
+    C --> E
+    E --> F["Claude answers from<br/>retrieved context"]
+    F --> G{"Found in the<br/>document?"}
+    G -- Yes --> H["Grounded answer<br/>+ source page citation"]
+    G -- No --> I["I don't have enough<br/>information (guardrail)"]
+```
 ## Tech Stack
 - **UI:** Streamlit (Python)
 - **RAG Framework:** LangChain
